@@ -1,0 +1,48 @@
+<Html>
+    <head>
+        <title>hello</title>
+    </head>
+    <body>
+        1. Addition and substraction:
+        <p>Enter a number: <input type="number" id="fn"></p>
+        <p>Enter a number: <input type="number" id="sn"></p>
+        <input type="button" value="Find sum" onclick="caulatesum()">
+        <input type="button" value="Find difference" onclick="calculatediff()">
+        <p id="answer">The sum is: </p>
+        <p id="answer2">The diff is: </p>
+        <hr>
+        <hr>
+        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" width="200" alt="A girl holding camera">
+        <script>
+            function addition(a,b){
+                return a+b;
+            }
+            function substraction(a,b){
+                return a-b;
+            }
+            //  var N1 = parseInt(prompt("Enter 1:"));
+            //  var N2 = parseInt(prompt("Enter 2:"));
+
+            //  var result = addition(N1, N2);
+            
+            //  document.write("<br><br>The value is: " + result);
+            
+            function caulatesum(){
+                var num1 = parseInt(document.getElementById("fn").value);
+                var num2 = parseInt(document.getElementById("sn").value);
+                
+                var result = addition(num1,num2);
+
+                document.getElementById("answer").innerHTML="The sum is: " + result;
+            }
+            function calculatediff(){
+                var num3 = parseInt(document.getElementById("fn").value);
+                var num4 = parseInt(document.getElementById("sn").value);
+
+                var result2 = substraction(num3,num4);
+
+                document.getElementById("answer2").innerHTML="The diff is: " + result2;
+            } 
+</script>
+</body>
+</Html> 
